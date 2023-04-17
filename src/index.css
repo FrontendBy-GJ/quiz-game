@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-950;
+}
+
+.correct {
+  animation: correct 3s ease-in-out forwards;
+}
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: #fb923c;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(to bottom, #1d4ed8, #172554, #1d4ed8);
+  }
+  70%,
+  100% {
+    background: #16a34a;
+  }
+}
+
+.wrong {
+  animation: wrong 3s ease-in-out forwards;
+}
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: #fb923c;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(to bottom, #1d4ed8, #172554, #1d4ed8);
+  }
+  70%,
+  100% {
+    background: #dc2626;
+  }
+}
+
+.bank {
+  animation: bank 1s ease-in-out forwards;
+}
+@keyframes bank {
+  from {
+    background: #16a34a;
+  }
+  to {
+    background: linear-gradient(to top, #0000, #1d4ed8);
+  }
+}
+
+.warning {
+  animation: warning 1s 5 ease-in forwards reverse;
+}
+@keyframes warning {
+  from {
+    background: linear-gradient(to bottom, #1d4ed8, #0000);
+  }
+  to {
+    background: linear-gradient(to bottom, #dc2626, #0000);
+  }
+}
